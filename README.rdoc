@@ -1,28 +1,34 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps:
 
-Things you may want to cover:
+1. clone Repo on any system 
 
-* Ruby version
+<tt>rails should be installed</tt>
 
-* System dependencies
+2. Go to app directory in terminal/cmd  
 
-* Configuration
+<tt>cd ajax-in-rails</tt>
 
-* Database creation
+3. Install required ruby gems 
 
-* Database initialization
+<tt>bundle install</tt>
 
-* How to run the test suite
+4. Migrate the database 
 
-* Services (job queues, cache servers, search engines, etc.)
+<tt>rake db:migrate</tt>
 
-* Deployment instructions
+5. Create Demo posts for Post table
 
-* ...
+<tt>rake db:seed</tt>
 
+6. Run rails server 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt>rails s</tt>
+
+7. Go to browser to see working ajax with rails 
+
+<tt>http://127.0.0.1:3000/</tt>
+
+Have Fun :)
+
