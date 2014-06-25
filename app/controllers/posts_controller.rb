@@ -14,8 +14,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @posts = Post.all
     @post = Post.create(post_params)
+    @posts = Post.find_all_by_id(@post.id)
   end
 
   def edit
@@ -23,10 +23,10 @@ class PostsController < ApplicationController
   end
 
   def update
-    @posts = Post.all
+    #@posts = Post.all
     @post = Post.find(params[:id])
-
     @post.update_attributes(post_params)
+    @posts = Post.find_all_by_id(@post.id)
   end
 
   def delete
@@ -34,8 +34,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @posts = Post.all
     @post = Post.find(params[:id])
+    @deleted_id = @post.id
     @post.destroy
   end
 

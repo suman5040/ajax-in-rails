@@ -1,1 +1,7 @@
-<%= render "save" %>
+$("ul.errors").html("")
+<% if @post.errors.any? %>
+<%= render "error" %>
+<% else %>
+$("#<%= @post.id %>").html("<%= escape_javascript(render 'index') %>")
+$("#post-modal").modal("hide")
+<% end %>

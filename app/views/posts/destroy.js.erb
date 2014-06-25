@@ -1,1 +1,7 @@
-<%= render "save" %>
+$("ul.errors").html("")
+<% if @post.errors.any? %>
+<%= render "error" %>
+<% else %>
+$("#<%= @deleted_id %>").hide("slow")
+$("#post-modal").modal("hide")
+<% end %>
