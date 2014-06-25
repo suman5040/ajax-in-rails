@@ -1,0 +1,18 @@
+<div class="container col-sm-8 col-sm-offset-2">
+  <div class="well">
+    <%= link_to "New Post", new_post_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <div class="post-index">
+        <%= render "index" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="post-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div id="inner-post-modal" class="modal-content"></div>
+  </div>
+</div>
